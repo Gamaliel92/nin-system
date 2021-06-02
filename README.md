@@ -9,7 +9,7 @@ A test API to enable users link their NIN to their phone numbers.
 - `cd nin-system` and install all requirements using - `pip install -r requirements.txt`
 - Runserver `python manage.py runserver`
 
-#### Contribution
+#### Contributing
 
 - Fork and open pull requests
 - Remember to always include newly installed libraries in the requirements i.e `pip freeze > requirements.txt`
