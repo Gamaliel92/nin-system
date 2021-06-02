@@ -11,5 +11,6 @@ A test API to enable users link their NIN to their phone numbers.
 
 #### Contributing
 
-- Fork and open pull requests
+- Use the fork button at the top of this repo to fork the project
+- Write your codes and open pull requests
 - Remember to always include newly installed libraries in the requirements i.e `pip freeze > requirements.txt`
