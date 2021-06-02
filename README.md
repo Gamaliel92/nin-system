@@ -5,7 +5,7 @@ A test API to enable users link their NIN to their phone numbers.
 #### Setup
 
 - Create your virtual environment using `virtualenv env`, `pipenv shell` or which ever virtual environment library you prefer 
-- Clone this repository - `git clone git@github.com:DeeStarks/nin-system.git`
+- Clone this repository - `git clone https://github.com/DeeStarks/nin-system.git`
 - `cd nin-system` and install all requirements using - `pip install -r requirements.txt`
 - Runserver `python manage.py runserver`
 
@@ -62,7 +62,7 @@ And body should be passed in the format below:
     "phone_number": "09000000001"
 }
 ```
-Success response will be sent like below if request objects are true:
+Success response will be sent like below if request objects are checked:
 ```json
 {
     "status": "success",
