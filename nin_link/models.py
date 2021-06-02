@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class nin_links(models.Model):
+class LinkNin(models.Model):
     nin = models.CharField(max_length=50, null=True)
     phone_number = models.CharField(max_length=15, null=True)
     status = models.BooleanField(default=False)
