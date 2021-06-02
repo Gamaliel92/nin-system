@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'payment'
+
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+PAYSTACK_SECRET = "Bearer sk_test_b9ba12faa539c878c375754c6f33872c19557dc6"
