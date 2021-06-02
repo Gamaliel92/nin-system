@@ -17,7 +17,7 @@ class ApiPrice(models.Model):
 
 class PaymentToken(models.Model):
     payer = models.ForeignKey(MakePayment, on_delete=models.CASCADE)
-    secret = models.CharField(max_length=100, null=True)
+    secret = models.CharField(unique=True, max_length=100, null=True)
 
     def __str__(self):
         return self.secret
