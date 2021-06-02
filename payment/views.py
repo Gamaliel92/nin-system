@@ -25,7 +25,7 @@ def fetch_banks(request):
 def make_payment(request):
     if request.method == "POST":
         try:
-            email = request.data['email']
+            phone_number = request.data['phone_number']
             bank_code = request.data['bank_code']
             account_number = request.data['account_number']
 
@@ -47,7 +47,7 @@ def make_payment(request):
                 """
 
                 payment = MakePayment.objects.create(
-                    email=email,
+                    phone_number=phone_number,
                     bank=bank_code,
                     account_number=account_number
                 )
@@ -57,7 +57,7 @@ def make_payment(request):
                 )
                 success_res = {
                     "status": "success",
-                    "message": "Your payment was successful. Note that your secret key can only be used once to link NIN with a phone number using the email you provided, and can't be retrived once this response is closed.",
+                    "message": "Your payment was successful. Note that your secret key can only be used once to link NIN with the phone number you provided, and can't be retrived once this response is closed.",
                     "data": {
                         "amount": price,
                         "currency": "NGN",
@@ -68,7 +68,7 @@ def make_payment(request):
         except KeyError:
             keyerr = {
                 "status": "error",
-                "message": "email, bank_code, account_number is required."
+                "message": "phone_number, bank_code, account_number is required."
             }
             return Response(keyerr, status=status.HTTP_400_BAD_REQUEST)
 
