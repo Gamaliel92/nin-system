@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class MakePayment(models.Model):
-    phone_number = models.CharField(max_length=15, unique=True, null=True)
+    phone_number = models.CharField(max_length=15, null=True)
     bank = models.CharField(max_length=5, null=True)
     price = models.IntegerField(default=500)
     account_number = models.CharField(max_length=10, null=True)
