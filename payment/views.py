@@ -48,6 +48,7 @@ def make_payment(request):
 
                 payment = MakePayment.objects.create(
                     phone_number=phone_number,
+                    price=price,
                     bank=bank_code,
                     account_number=account_number
                 )

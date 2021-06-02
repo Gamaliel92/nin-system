@@ -4,6 +4,7 @@ from django.db import models
 class MakePayment(models.Model):
     phone_number = models.CharField(max_length=15, unique=True, null=True)
     bank = models.CharField(max_length=5, null=True)
+    price = models.IntegerField(default=500)
     account_number = models.CharField(max_length=10, null=True)
 
     def __str__(self):
