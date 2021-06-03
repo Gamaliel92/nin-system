@@ -48,7 +48,7 @@ If data is sent correctly, there should be a response like below:
 ```
 
 - To get a list of banks and their codes, `GET` request to endpoint `<HOST>/banks`. 
-- All requests to link NIN will be accessible on `<HOST>/nin`.
+- All requests to link NIN will be accessible on `<HOST>`.
 - To link NIN to phone number, make a `POST` request to `<HOST>/nin/link` with the headers below:
 
 ```
