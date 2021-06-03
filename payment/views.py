@@ -37,6 +37,12 @@ def make_payment(request):
                 }
                 return Response(code_err, status=status.HTTP_400_BAD_REQUEST)
             else:
+                if phone_number in [payer.phone_number for payer in MakePayment.objects.all()]:
+                    phone_exists = {
+                        "status": "error",
+                        "message": "Your phone number has already been linked with a NIN"
+                    }
+                    return Response(phone_exists, status=status.HTTP_403_FORBIDDEN)
                 all_alnum = string.ascii_letters+string.digits+"_"
                 auth_code = 'NIN_'+''.join(random.sample(all_alnum, 50))
 
